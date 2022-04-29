@@ -1,0 +1,90 @@
+@mixin percent($color) {
+  color: $color;
+  font-size: 46px;
+  margin-top: 40px;
+}
+
+.result {
+  width: 100%;
+  padding: 5% 10%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .exit {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    position: relative;
+
+    h4 {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .high {
+      @include percent(green);
+    }
+
+    .low {
+      @include percent(red);
+    }
+
+    div {
+      width: 200px;
+      height: 300px;
+      border: 2px solid $secondary;
+      padding: 20px;
+      text-align: center;
+      margin-right: 10px;
+    }
+  }
+
+  .totalResult {
+    margin-top: 60px;
+    color: $white;
+
+    .total {
+      font-size: 16px;
+      text-align: center;
+      background-color: $green;
+      padding: 5px;
+    }
+
+    .percent {
+      margin-left: 8px;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .message {
+      color: black;
+      margin-top: 30px;
+
+      ul {
+        margin: 20px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    .cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+      margin-bottom: 10px;
+    }
+  }
+}

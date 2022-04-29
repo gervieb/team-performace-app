@@ -1,0 +1,26 @@
+.slider {
+  margin-top: 30px;
+  padding: 0 50px;
+
+  .twoColumns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .slideMark {
+    font-size: medium;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0 20px;
+
+    .slideMark {
+      font-size: small;
+    }
+
+    .twoColumns {
+      font-size: small;
+    }
+  }
+}

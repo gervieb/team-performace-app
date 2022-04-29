@@ -1,0 +1,54 @@
+@import "./variable.scss";
+@import "./components";
+@import "./modules";
+
+@mixin button($bgColor) {
+  background-color: $bgColor;
+  color: $white;
+  border-radius: 4px;
+  margin: 20px 0;
+
+  &:hover {
+    background-color: transparentize($bgColor, 0.2);
+  }
+}
+
+.primary-btn {
+  @include button($primary);
+}
+
+.secondary-btn {
+  @include button($secondary);
+}
+
+.tertiary-btn {
+  @include button($white);
+  color: $black;
+}
+
+.medium {
+  padding: 8px 16px;
+  font-size: 19px;
+}
+
+.small {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .medium {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .medium {
+    padding: 5px 8px;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../variable.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: $primary;
+  color: $white;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .container {
+    padding: 10px;
+    text-align: right;
+
+    .pointer {
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}

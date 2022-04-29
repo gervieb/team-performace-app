@@ -1,0 +1,27 @@
+.questions {
+  text-align: right;
+  margin: 5% 10% 0 10%;
+
+  .flex-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .preview-btn {
+      margin-right: 5px;
+      background-color: $info;
+    }
+
+    .submit-btn {
+      background-color: $secondary;
+    }
+  }
+
+  @media (max-width: $breakpoint-laptop) {
+    margin: 3% 5% 0 3%;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: 1% 5% 0 1%;
+  }
+}
